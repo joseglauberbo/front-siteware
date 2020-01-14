@@ -1,4 +1,5 @@
 <template>
+<div>
   <form @submit="submitProduct">
     <label for="name">Name of product</label>
     <input type="text" class="form-control" v-model="name">
@@ -6,6 +7,7 @@
     <input type="text" class="form-control" v-model="price">
     <input type="submit" value="Submit">
   </form>
+  </div>
   
 </template>
 

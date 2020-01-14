@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Navbar/>
     <CardProduct/>
   </div>
 </template>

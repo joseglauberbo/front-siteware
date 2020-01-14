@@ -3,8 +3,6 @@
     <router-link to="/"><li><a>Home</a></li></router-link>
     <router-link to="/product"><li><a>Create new product</a></li></router-link>
   </ul>
-</ul>
-
 </template>
 
 <style>
