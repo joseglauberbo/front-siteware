@@ -1,8 +1,6 @@
 <template>
   <div>
-    <input type="text" class="form-control" v-model="name">
-    <button class="button">Submit</button>
-    <button class="button">Delete this product</button>
+    
   </div>
 </template>
 
@@ -34,6 +32,18 @@ input[type=text], select {
 
   export default {
     name: 'OptionsProduct',
+    data() {
+          return { 
+              shop: []
+            };
+    },
+    methods: {
+      addtoShop(e) {},
+    },
+     mounted() {
+          this.addtoShop();
+        }
   }
+  
 
 </script>

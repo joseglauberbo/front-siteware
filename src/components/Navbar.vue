@@ -2,6 +2,7 @@
   <ul>
     <router-link to="/"><li><a>Home</a></li></router-link>
     <router-link to="/product"><li><a>Create new product</a></li></router-link>
+    <router-link to="/shop"><li><a>Shop</a></li></router-link>
   </ul>
 </template>
 

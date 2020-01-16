@@ -3,8 +3,9 @@
    <div class="card" v-for="product in products">
     <div class="container">
         {{product.name}}
-        <OptionsProduct>
-        </OptionsProduct>
+        <input type="text" class="form-control">
+        <button class="button" @click="addToCart(product)" >Adicionar no carrinho</button>
+        <button class="button">Delete this product</button>
     </div>
   </div>
   </div>
@@ -21,7 +22,8 @@
     },
     data() {
             return { 
-              products: {}
+              products: {},
+              productsShop: []
             };
         },
         methods: {
@@ -34,13 +36,35 @@
             .catch(function(err){
               console.log(err);
             })
-        }
+          },
+          addToCart(product) {
+            let currentObj = this;
+            this.$http.get('/products/' + product._id)
+            .then(function(res) {
+              currentObj.productsShop.push(res.data)
+            })
+            .catch(function(err){
+              console.log(err);
+            })
+            this.saveProducts();
+          },
+          saveProducts() {
+            const parsed = JSON.stringify(this.productsShop);
+            localStorage.setItem('productsShop', parsed)
+          }
         },
         mounted() {
           this.getProducts();
+
+          if(localStorage.getItem('productsShop')) {
+            try {
+              this.productsShop = JSON.parse(localStorage.getItem('productsShop'))
+            } catch(e) {
+              localStorage.removeItem('productsShop')
+            }
+          }
         }
   }
-  
 
 </script>
 
