@@ -12,10 +12,8 @@ const base = axios.create({
 });
 Vue.prototype.$http = base;
 
-/* eslint-disable no-new */
 new Vue({
-  el: '#app',
+  render: h => h(App),
   router,
-  components: { App },
-  template: '<App/>'
-})
+  components: { App }
+}).$mount('#app')

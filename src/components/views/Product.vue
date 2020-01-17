@@ -11,7 +11,7 @@ import Navbar from '../Navbar'
 import CardProduct from '../CardProduct'
 
 export default {
-  name: 'Product',
+  name: 'product',
   components: {
     Navbar,
     CardProduct

@@ -7,6 +7,7 @@ import Shop from '../components/views/Shop'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',

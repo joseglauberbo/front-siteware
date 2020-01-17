@@ -5,11 +5,11 @@
     <input type="text" class="form-control" v-model="name">
     <label for="price">Price</label>
     <input type="text" class="form-control" v-model="price">
-    <label for="hasPromotion">Choose a promotion</label>
-    <select>
-      <option value="1" v-model="hasPromotion">Pague 2 leve 1</option>
-      <option value="2" v-model="hasPromotion">3 por 10 reais</option>
-      <option value="0" v-model="hasPromotion">Nenhuma</option> 
+    <label for="promotion">Choose a promotion</label>
+    <select v-model="promotion">
+      <option value="1">Pague 2 leve 1</option>
+      <option value="2" v-model="promotion" >3 por 10 reais</option>
+      <option value="0" selected v-model="promotion">Nenhuma</option> 
     </select>
     <input type="submit" value="Submit">
   </form>
@@ -25,7 +25,7 @@
             return {
               name: '',
               price: '',
-              hasPromotion: ''
+              promotion: '',
             };
         },
         methods: {
@@ -35,7 +35,7 @@
                 this.$http.post('/products', {
                     name: this.name,
                     price: this.price,
-                    hasPromotion: this.hasPromotion
+                    promotion: this.promotion
                 })
                 .then(function (response) {
                     currentObj.output = response.data ;
