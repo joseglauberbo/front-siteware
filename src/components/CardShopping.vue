@@ -3,6 +3,7 @@
    <div class="card" v-for="(product, index) in productAtShop">
     <div class="container">
         {{product.name}}
+        {{product.qt}}
         {{product.price}}
         {{product.promotion}}
     </div>

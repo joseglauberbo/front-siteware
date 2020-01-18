@@ -7,7 +7,7 @@
     <input type="text" class="form-control" v-model="price">
     <label for="promotion">Choose a promotion</label>
     <select v-model="promotion">
-      <option value="1">Pague 2 leve 1</option>
+      <option value="1">Pague 1 leve 2</option>
       <option value="2" v-model="promotion" >3 por 10 reais</option>
       <option value="0" selected v-model="promotion">Nenhuma</option> 
     </select>
