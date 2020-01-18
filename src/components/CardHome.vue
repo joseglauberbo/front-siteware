@@ -2,7 +2,9 @@
   <div>
    <div class="card" v-for="(product, index) in products">
     <div class="container">
-        {{product.name}}
+        <p>Name: {{product.name}} </p>
+        <p>Price: {{product.price}}</p>
+        <p>Sale: {{product.promotion}}</p>
         <form >
           <input type="text" class="form-control" v-model="qt">
         </form>
