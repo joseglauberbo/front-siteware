@@ -49,7 +49,7 @@
             .then(function(res){
               currentObj.products.splice(currentObj.products.indexOf(product), 1)
             })
-            .catch(function(err){
+            .catch(function(err) {
               console.log(err);
             })
           },
@@ -63,10 +63,10 @@
               promotion: product.promotion 
             })
             .then(function (response) {
-              currentObj.output = response.data ;
+              currentObj.products.push(response.data)
             })
-            .catch(function (error) {
-              currentObj.output = error;
+            .catch(function (err) {
+              console.log(err);
             });
           }
         },

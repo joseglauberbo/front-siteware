@@ -2,10 +2,10 @@
   <div>
    <div class="card" v-for="(product, index) in productAtShop">
     <div class="container">
-        {{product.name}}
-        {{product.qt}}
-        {{product.price}}
-        {{product.promotion}}
+        <p>Name: {{product.name}} </p>
+        <p>Quantity: {{product.qt}}</p>
+        <p>Price: {{product.price}}</p>
+        <p>Sale: {{product.promotion}}</p>
     </div>
   </div>
   </div>
