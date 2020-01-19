@@ -8,6 +8,11 @@
         <p>Sale: {{product.promotion}}</p>
     </div>
   </div>
+  <div class="card" v-for="(object, index) in object">
+  <div class="container">
+    <p>Value of Carrinho: {{object.value}} </p>
+  </div>
+</div>
   </div>
 </template>
 
@@ -18,7 +23,8 @@
     },
     data() {
       return {
-        productAtShop: []
+        productAtShop: [],
+        object: []
       }
     },
       methods: {
@@ -31,10 +37,22 @@
             .catch(function(err){
               console.log(err);
             })
+          },
+          getValueOfShopCart(){
+            let currentObj = this;
+            this.$http.get('/shop/size')
+            .then(function(response){
+              currentObj.object = response.data;
+            })
+            .catch(function(err){
+              console.log(err);
+            })
+            console.log(object)
           }
         },
         mounted() {
-          this.getProductsShop()
+          this.getProductsShop(),
+          this.getValueOfShopCart()
         },
   }
 </script>
