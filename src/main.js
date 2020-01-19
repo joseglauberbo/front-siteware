@@ -8,8 +8,8 @@ import axios from 'axios'
 Vue.config.productionTip = false
 
 const base = axios.create({
-  baseURL: "https://siteware.herokuapp.com/"
-});
+  baseURL: "http://localhost:3000/"
+})
 Vue.prototype.$http = base;
 
 new Vue({
