@@ -1,30 +1,14 @@
 # siteware
 
-> A Vue.js project
+Este um software que tem por intuito mostrar a funcionalidade de promoções em um e-commerce. O usuário pode cadastrar um produto e associar ou não a esse uma promoção. Ao adicionar esse produto no carrinho de compras, o sistema deve calcular qual o valor do produto levando em consideração as promoções aplicadas. Se divirta ao verificar o valor de seus produtos com as promoções já disponíveis.
 
-## Build Setup
+PRÉ REQUISITOS PARA RODAR O SISTEMA:
 
-``` bash
-# install dependencies
-npm install
+Vue
 
-# serve with hot reload at localhost:8080
-npm run dev
+PARA EXECUTAR:
 
-# build for production with minification
-npm run build
+1) git clone no projeto
+2) yarn install - dentro da pasta do projeto
+3) yarn start - em um terminal para verificar a página web
 
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
